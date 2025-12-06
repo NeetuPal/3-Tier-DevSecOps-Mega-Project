@@ -10,7 +10,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: adityajaiswal.com
+    - host: mydemoproject.site
+    # - host: adityajaiswal.com
       http:
         paths:
           - path: /api
@@ -27,7 +28,8 @@ spec:
                 name: frontend-svc
                 port:
                   number: 80
-    - host: www.adityajaiswal.com
+    - host: www.mydemoproject.site
+    # - host: www.adityajaiswal.com
       http:
         paths:
           - path: /api
@@ -46,6 +48,8 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - adityajaiswal.com
-        - www.adityajaiswal.com
+        - mydemoproject.site
+        # - adityajaiswal.com
+        - www.mydemoproject.site
+        # - www.adityajaiswal.com
       secretName: adityajaiswal-co-tls
