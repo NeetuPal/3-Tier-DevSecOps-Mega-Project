@@ -110,7 +110,8 @@ spec:
         name: mysql-persistent-storage
       spec:
         accessModes: [ "ReadWriteOnce" ]
-        storageClassName: ebs-sc
+        storageClassName: gp3
+        # storageClassName: ebs-sc
         resources:
           requests:
             storage: 5Gi
